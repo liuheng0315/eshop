@@ -9,4 +9,5 @@ public interface UserService {
      * 查询用户信息
      */
     public User findUserInfo();
+    public User getCachedUserInfo();
 }
