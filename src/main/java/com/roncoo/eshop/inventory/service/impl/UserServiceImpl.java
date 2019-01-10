@@ -1,8 +1,7 @@
-package com.roncoo.eshop.inventory.Service.impl;
+package com.roncoo.eshop.inventory.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.fasterxml.jackson.core.JsonParser;
-import com.roncoo.eshop.inventory.Service.UserService;
+import com.roncoo.eshop.inventory.service.UserService;
 import com.roncoo.eshop.inventory.dao.RedisDAO;
 import com.roncoo.eshop.inventory.mapper.UserMapper;
 import com.roncoo.eshop.inventory.model.User;

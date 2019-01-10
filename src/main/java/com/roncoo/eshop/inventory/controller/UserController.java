@@ -1,6 +1,6 @@
 package com.roncoo.eshop.inventory.controller;
 
-import com.roncoo.eshop.inventory.Service.UserService;
+import com.roncoo.eshop.inventory.service.UserService;
 import com.roncoo.eshop.inventory.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

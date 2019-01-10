@@ -1,4 +1,4 @@
-package com.roncoo.eshop.inventory.Service;
+package com.roncoo.eshop.inventory.service;
 
 import com.roncoo.eshop.inventory.model.User;
 /**

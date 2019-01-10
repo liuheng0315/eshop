@@ -1,8 +1,12 @@
 package com.roncoo.eshop.inventory.request;
 
+import com.roncoo.eshop.inventory.thread.RequestProcessorThreadPool;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 请求内存的队列
@@ -12,7 +16,10 @@ public class RequestQueue {
      * 内存队列
      */
     private List<ArrayBlockingQueue<Request>> queues = new ArrayList<ArrayBlockingQueue<Request>>();
-
+    /**
+     * 标识位map
+     */
+    private Map<Integer, Boolean> flagMap = new ConcurrentHashMap<Integer, Boolean>();
     /**
      * 静态内部类的方式去初始化单例
      */
@@ -40,5 +47,25 @@ public class RequestQueue {
      */
     public void addQueue(ArrayBlockingQueue<Request> queue){
         this.queues.add(queue);
+    }
+    /**
+     * 获取内存队列的数量
+     * @return
+     */
+    public int queueSize() {
+        return queues.size();
+    }
+
+    /**
+     * 获取内存队列
+     * @param index
+     * @return
+     */
+    public ArrayBlockingQueue<Request> getQueue(int index) {
+        return queues.get(index);
+    }
+
+    public Map<Integer, Boolean> getFlagMap() {
+        return flagMap;
     }
 }

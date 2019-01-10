@@ -2,8 +2,6 @@ package com.roncoo.eshop.inventory.thread;
 
 import com.roncoo.eshop.inventory.request.Request;
 import com.roncoo.eshop.inventory.request.RequestQueue;
-
-import java.util.ArrayList;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -46,7 +44,7 @@ public class RequestProcessorThreadPool {
         return Singleton.getInstance();
     }
     /**
-     * 初始化边界方法
+     * 初始化便捷方法
      */
     public static void init(){
         getInstance();
